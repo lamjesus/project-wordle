@@ -7,6 +7,7 @@ function InputWord ({ handleAnswer }) {
     event.preventDefault()
     setGuess(event.target.value.toUpperCase())
   }
+
   const handleSubmit = (event) => {
     event.preventDefault()
     handleAnswer(guess)

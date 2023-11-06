@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard'
+    'standard',
+    "eslint-config-prettier"
   ],
   overrides: [
   ],
@@ -19,4 +20,5 @@ module.exports = {
   rules: {
     'react/prop-types': 0
   }
+
 }
