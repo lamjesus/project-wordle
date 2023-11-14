@@ -10,15 +10,15 @@ const answer = sample(WORDS)
 console.info({ answer })
 
 function Game () {
-  const [answer, setAnswer] = React.useState([])
+  const [userAnswer, setUserAnswer] = React.useState([])
   const handleAnswer = (guess) => {
-    const guesses = [...answer]
+    const guesses = [...userAnswer]
     guesses.push({ guess, id: Math.random() })
-    setAnswer(guesses)
+    setUserAnswer(guesses)
   }
   return (
     <>
-      <AnswerList answers={answer}/>
+      <AnswerList userAnswer={userAnswer} gameAnswer={answer} />
       <InputWord handleAnswer={handleAnswer} />
     </>
   )
